@@ -101,11 +101,11 @@
 
             $(document).on('click', 'button', function() {
                 var varId = $('#id').val();
-                var varPass = varPass;
+                var varPass = $('#password').val();
                 (async () => {
                     let hashPassword = await sha256(varPass);
                     if (varId == "member" && hashPassword == "17dc3303cd10e0824497a0874a4b86275e63c943e3fefba5f5760959dd525fc2") {
-                    sha256(password).then(hash => location.replace("https://hiw-homepage.github.io/" + hash));
+                    sha256(varPass).then(hash => location.replace("https://hiw-homepage.github.io/" + hash));
                 }
                 })();
             });
