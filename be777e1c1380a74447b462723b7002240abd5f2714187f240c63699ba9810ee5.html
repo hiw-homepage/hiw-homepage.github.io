@@ -7,9 +7,60 @@
         <meta charset="utf-8">
         <meta name="robots" content="noindex">
         <title>会員ページ</title>
+        <link rel="stylesheet" href="index.css">
+        <style>
+            @media screen and (min-device-width: 1024px) {
+                iframe {
+                    height: calc(calc(100vw - 512px) * 0.5625);
+                }
+            }
+            @media screen and (max-device-width: 1024px) {
+                iframe {
+                    height: calc(calc(100vw - 256px) * 0.5625);
+                }
+            }
+            body {
+                background-color: whitesmoke;
+            }
+            main div {
+                z-index: 2;
+                position: relative;
+                background-color: white;
+                padding: 24px 24px;
+                font-family: 'Zilla Slab', serif;
+                color: black;
+            }
+            main div h1 {
+                font-weight: 300;
+                margin: 0;
+            }
+            iframe {
+                margin: 0;
+                width: 100%;
+                border: 1px solid #d3d3d3;
+            }
+        </style>
         <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+        <script>
+
+        </script>
     </head>
     <body>
-        <h1>会員ページ</h1>
+        <header>
+            <a href="../"><img src="./image/logo.svg" width="63.49606299212598425196850393701" height="32" alt=""></a>
+            <div>
+                <a href="">理念</a>
+                <a href="">ご案内</a>
+                <a href="./mail">メールフォーム</a>
+            </div>
+        </header>
+        <img style="position: relative; top: 80px; width: 100%; height: 144px; object-fit: cover; z-index: 1; pointer-events: none;" src="./image/group2.avif" alt="">
+        <main>
+            <div>
+                <h1>Member page</h1>
+                <p>会員用ページです。お知らせなどを見ることができます。</p>
+                <iframe width="100%" height="100%" src="../news"></iframe>
+            </div>
+        </main>
     </body>
 </html>
