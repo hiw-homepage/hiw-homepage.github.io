@@ -98,14 +98,13 @@
                 const digest = await crypto.subtle.digest('SHA-256', uint8)
                 return Array.from(new Uint8Array(digest)).map(v => v.toString(16).padStart(2,'0')).join('')
             }
-
             $(document).on('click', 'button', function() {
                 var varId = $('#id').val();
-                var varPass = $('#password').val();
+                var varPIN = $('#pin').val();
                 (async () => {
-                    let hashPassword = await sha256(varPass);
-                    if (varId == "member" && hashPassword == "17dc3303cd10e0824497a0874a4b86275e63c943e3fefba5f5760959dd525fc2") {
-                    sha256(varPass).then(hash => location.replace("https://hiw-homepage.github.io/" + hash));
+                    let hashPIN = await sha256(varPIN);
+                    if (varId == "member" && hashPIN == "17dc3303cd10e0824497a0874a4b86275e63c943e3fefba5f5760959dd525fc2") {
+                    sha256(varPIN).then(hash => location.replace("https://hiw-homepage.github.io/" + hash));
                 }
                 })();
             });
@@ -127,7 +126,7 @@
                 <p>以下を入力してログインしてください。</p>
                 <div>
                     <label for="id">ID</label><input id="id" name="id" required type="text"><br>
-                    <label for="password">パスワード</label><input id="password" name="password" required type="password">
+                    <label for="pin">PIN</label><input id="pin" name="pin" required type="password" maxlength="4">
                 </div>
                 <div>
                     <button>送信</button>
