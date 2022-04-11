@@ -12,13 +12,11 @@
             @media screen and (min-device-width: 1024px) {
                 iframe {
                     height: calc(calc(100vw - 512px) * 0.5625);
-                    width: calc(100% - 32px);
                 }
             }
             @media screen and (max-device-width: 1024px) {
                 iframe {
                     height: calc(calc(100vw - 256px) * 0.5625);
-                    width: 100%;
                 }
             }
             body {
@@ -40,6 +38,7 @@
                 margin: 0;
                 border: 1px solid #d3d3d3;
                 padding: 16px;
+                width: calc(100% - 32px);
             }
         </style>
         <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
