@@ -112,6 +112,6 @@ main .see-terms a::after {
 main .see-terms a:hover {
     text-decoration: underline solid;
 }
-label img::selection {
+label img::selection, select::selection {
     filter: invert();
 }
