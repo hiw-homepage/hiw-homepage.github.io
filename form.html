@@ -88,14 +88,24 @@
         </style>
         <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
         <script>
+            $('#submit button').ready(function() {
+                const join = document.cookie
+                .split("; ")
+                .find(row => row.startsWith("join"))
+                .split("=")[1];
+                if (join == "submit") {
+                $('#submit').html('<button type="submit" disabled>送信済み</button>');
+                }
+            });
+
             function OnSubmit() {
                 var submitted = false;
-                $('#submit').html('<button type="submit" disabled>送信済み</button>')
+                $('#submit').html('<button type="submit" disabled>送信済み</button>');
+                document.cookie = "join=submit";
             }
-
+            
             $('#ua').ready(function() {
                 const UA = window.navigator.userAgent.toLowerCase();
-
                 if (UA.indexOf("msie") != -1 || UA.indexOf("trident") != -1) {
                     $('.browser').val('Internet Explorer');
                 } else if (UA.indexOf("edg") != -1 || UA.indexOf("edge") != -1) {
