@@ -94,13 +94,13 @@
                 .find(row => row.startsWith("join"))
                 .split("=")[1];
                 if (join == "submit") {
-                $('#submit').html('<button type="submit" disabled>送信済み</button>');
+                $('#submit').html('<button type="submit" disabled style="cursor: not-allowed;">送信済み</button>');
                 }
             });
 
             function OnSubmit() {
                 var submitted = false;
-                $('#submit').html('<button type="submit" disabled>送信済み</button>');
+                $('#submit').html('<button type="submit" disabled style="cursor: not-allowed;">送信済み</button>');
                 document.cookie = "join=submit; max-age=3153600";
             }
 
