@@ -101,9 +101,9 @@
             function OnSubmit() {
                 var submitted = false;
                 $('#submit').html('<button type="submit" disabled>送信済み</button>');
-                document.cookie = "join=submit";
+                document.cookie = "join=submit; max-age=3153600";
             }
-            
+
             $('#ua').ready(function() {
                 const UA = window.navigator.userAgent.toLowerCase();
                 if (UA.indexOf("msie") != -1 || UA.indexOf("trident") != -1) {
