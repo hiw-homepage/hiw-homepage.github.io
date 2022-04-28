@@ -69,10 +69,10 @@
         <script loading="lazy">
             $('#ua').ready(function() {
                 const UA = window.navigator.userAgent.toLowerCase();
-                if (!(UA.indexOf("msie") != -1 || UA.indexOf("trident") != -1)) {
-                    $('.motto').css('background-image', 'url("./image/group2.webp")');
+                if (UA.indexOf("msie") != -1 || UA.indexOf("trident") != -1) {
+                    $('[src="./image/group2.avif"]').attr('src', './image/group2.webp');
                 } else if (UA.indexOf("safari") != -1) {
-                    $('.motto').css('background-image', 'url("./image/group2.webp")');
+                    $('[src="./image/group2.avif"]').attr('src', './image/group2.webp');
                 }
             });
             $(document).on('click', 'button', function(){

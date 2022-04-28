@@ -24,10 +24,10 @@
         <script>
             $('#ua').ready(function() {
                 const UA = window.navigator.userAgent.toLowerCase();
-                if (!(UA.indexOf("msie") != -1 || UA.indexOf("trident") != -1)) {
-                    $('.motto').css('background-image', 'url("./image/group.webp")');
+                if (UA.indexOf("msie") != -1 || UA.indexOf("trident") != -1) {
+                    $('[src="./image/group.avif"]').attr('src', './image/group.webp');
                 } else if (UA.indexOf("safari") != -1) {
-                    $('.motto').css('background-image', 'url("./image/group.webp")');
+                    $('[src="./image/group.avif"]').attr('src', './image/group.webp');
                 }
             });
             $(document).on('click', '#search', function(){
