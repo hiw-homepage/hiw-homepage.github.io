@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>会員カード</title>
+    
+    <link loading="lazy" rel="preconnect" href="https://fonts.googleapis.com">
+    <link loading="lazy" rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link loading="lazy" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;700&family=Zilla+Slab:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            width: 1253px 756px;
+            background-color: whitesmoke;
+        }
+    </style>
+</head>
+<body>
+<canvas id="canvas" width="1253" height="756"></canvas>
+<!--ダウンロード用リンク-->
+<a id="link"></a><br>
+<input id="number" type="text"><br>
+<input id="name" type="text"><br>
+<button id="button">適用</button>
+<button id="download">ダウンロード</button>
+<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+<script>
+
+    window.onload = function(){
+
+        var canvas = document.getElementById("canvas");
+        var link = document.getElementById('link');
+        var number = document.getElementById("number");
+        var name = document.getElementById("name");
+        var ctx = canvas.getContext('2d');
+        var img = new Image();
+        img.onload = function(){
+                ctx.drawImage(img,32,32,128,64);
+        };
+        img.src = 'https://hiw-homepage.github.io/image/logo.svg';
+
+        ctx.fillStyle = "white";
+        ctx.fillRect(0, 0, 1253, 756);
+        ctx.font = "100 48px 'Nunito Sans'";
+        ctx.fillStyle = "black";
+        ctx.fillText("番号:", 32, 288);
+        ctx.fillText("氏名:", 32, 512);
+        ctx.fillStyle = "whitesmoke";
+        ctx.fillRect(608, 108, 512, 512)
+
+        $('#button').click(function() {
+            const number = $('#number').val();
+            const name = $('#name').val();
+            ctx.font = "100 48px 'Nunito Sans'";
+            ctx.fillStyle = "black";
+            ctx.fillText(number, 160, 288);
+            ctx.fillText(name, 160, 512);
+        });
+
+        $('#download').click(function() {
+            if (canvas.msToBlob) {
+                var blob = canvas.msToBlob();
+                window.navigator.msSaveBlob(blob, "card.png");
+            } else {
+                link.href = canvas.toDataURL('image/png');
+                link.download = "card.png";
+                link.click();
+            }
+        });
+    };
+</script>
+</body>
+</html>

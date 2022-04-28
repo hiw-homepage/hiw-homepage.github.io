@@ -22,6 +22,14 @@
         </style>
         <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
         <script>
+            $('#ua').ready(function() {
+                const UA = window.navigator.userAgent.toLowerCase();
+                if (!(UA.indexOf("msie") != -1 || UA.indexOf("trident") != -1)) {
+                    $('.motto').css('background-image', 'url("./image/group.webp")');
+                } else if (UA.indexOf("safari") != -1) {
+                    $('.motto').css('background-image', 'url("./image/group.webp")');
+                }
+            });
             $(document).on('click', '#search', function(){
                 $('.search').css({
                     'display': 'flex',
@@ -29,6 +37,7 @@
                 $('#search').attr('id', 'close');
                 $('#img').attr('src', './image/close.svg');
             });
+
             $(document).on('click', '#close', function(){
                 $('.search').css({
                     'display': 'none',

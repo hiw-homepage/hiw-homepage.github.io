@@ -93,6 +93,14 @@
         </style>
         <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
         <script loading="lazy">
+            $('#ua').ready(function() {
+                const UA = window.navigator.userAgent.toLowerCase();
+                if (!(UA.indexOf("msie") != -1 || UA.indexOf("trident") != -1)) {
+                    $('.motto').css('background-image', 'url("./image/group2.webp")');
+                } else if (UA.indexOf("safari") != -1) {
+                    $('.motto').css('background-image', 'url("./image/group2.webp")');
+                }
+            });
             async function sha256(text){
                 const uint8  = new TextEncoder().encode(text)
                 const digest = await crypto.subtle.digest('SHA-256', uint8)
