@@ -1,1 +1,132 @@
-<!DOCTYPE html><html lang="ja"><meta charset="utf-8"><meta name="robots" content="noindex"><link rel="icon" href="./favicon.ico"><link loading="lazy" rel="preconnect" href="https://fonts.googleapis.com"><link loading="lazy" rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link loading="lazy" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;700&family=Zilla+Slab:wght@300;500;700&display=swap" rel="stylesheet"><style>body{font-size:16px;font-weight:200;background-color:#000;color:#fff}form{margin:32px}form *:not(img,a){display:block}h1{font-family:'Zilla Slab',serif;font-weight:bold;font-size:24px}p{font-family:"Nunito Sans",Helvetica,Arial,sans-serif}input{border:none;border-radius:0;padding:8px 16px;margin-bottom:8px;width:256px;box-sizing:border-box}a{color:#b8acf1;text-decoration:none}a:hover{text-decoration:underline solid #b8acf1}button{background-color:#6149f9;color:#fff;border:none;border-radius:0;font-weight:bold;font-size:16px;padding:8px 16px;cursor:pointer}iframe{display:none}button{margin-top:16px}select{border:1px solid #000;border-radius:0;padding:8px 16px;color:#000;background-color:transparent;width:256px;box-sizing:border-box;appearance:none;background-image:url('./image/down.svg');background-repeat:no-repeat;background-position:calc(100% - 16px) 50%;background-size:20px;filter:invert()}select option{color:#000 !important}#browser{display:none}label{font-family:'Zilla Slab',serif;font-weight:bold}label img::selection,select::selection{filter:invert()}</style><script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script><script>function OnSubmit(){$("#submit").html('<button type="submit" disabled style="cursor: not-allowed;">送信済み<\/button>');document.cookie="join=submit; max-age=3153600"}$("#submit button").ready(function(){const n=document.cookie.split("; ").find(n=>n.startsWith("join")).split("=")[1];n=="submit"&&$("#submit").html('<button type="submit" disabled style="cursor: not-allowed;">送信済み<\/button>')});$("#ua").ready(function(){const n=window.navigator.userAgent.toLowerCase();n.indexOf("msie")!=-1||n.indexOf("trident")!=-1?$(".browser").val("Internet Explorer"):n.indexOf("edg")!=-1||n.indexOf("edge")!=-1?$(".browser").val("Edge"):n.indexOf("opr")!=-1||n.indexOf("opera")!=-1?$(".browser").val("Opera"):n.indexOf("chrome")!=-1?n.indexOf("samsungbrowser")!=-1?$(".browser").val("Samsung Internet"):$(".browser").val("Chrome"):n.indexOf("safari")!=-1?$(".browser").val("Safari"):n.indexOf("firefox")!=-1?$(".browser").val("Firefox"):(n.indexOf("opr")!=-1||n.indexOf("opera")!=-1)&&$(".browser").val("Opera")})</script><iframe id="hidden" name="hidden"></iframe><form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfBL3lz6HeC8NHKehtAhdUuZnZb0umc2nM5_MjlzZzXtuFAFg/formResponse" id="join" name="join" onsubmit="OnSubmit();" target="hidden"><h1>Enrollment form</h1><p>全ての項目が必須です。一部でも欠如がある場合、内容は無効となります。入会以外はメールフォームまで。<div><input name="entry.1387815750" placeholder="お名前（必須）" required="required" type="text"><input name="entry.1736430845" placeholder="メールアドレス（必須）" required="required" type="email"><input class="browser" style="display:none" name="entry.1967375759" type="text"><label for="entry.1638592019"><img src="./image/browser.svg" style="height:12px;margin-right:4px">Browser</label><select name="entry.1638592019" class="browser"><option value="Edge">Edge<option value="Chrome">Chrome<option value="Firefox">Firefox<option value="Opera">Opera<option value="Safari">Safari<option value="Internet Explorer">Internet Explorer<option value="Brave">Brave<option value="Samsung Internet">Samsung Internet</select></div><div id="submit"><button type="submit">送信</button></div></form>
+<!DOCTYPE html>
+<html lang="ja">
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="expires" content="0">
+<link rel="icon" href="./favicon.ico">
+<link loading="lazy" rel="preconnect" href="https://fonts.googleapis.com">
+<link loading="lazy" rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link loading="lazy" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;700&family=Zilla+Slab:wght@300;500;700&display=swap" rel="stylesheet">
+<style>
+  body {
+    font-size: 16px;
+    font-weight: 200;
+    background-color: #000;
+    color: #fff
+  }
+
+  form {
+    margin: 32px
+  }
+
+  form *:not(img, a) {
+    display: block
+  }
+
+  h1 {
+    font-family: 'Zilla Slab', serif;
+    font-weight: bold;
+    font-size: 24px
+  }
+
+  p {
+    font-family: "Nunito Sans", Helvetica, Arial, sans-serif
+  }
+
+  input {
+    border: none;
+    border-radius: 0;
+    padding: 8px 16px;
+    margin-bottom: 8px;
+    width: 256px;
+    box-sizing: border-box
+  }
+
+  a {
+    color: #b8acf1;
+    text-decoration: none
+  }
+
+  a:hover {
+    text-decoration: underline solid #b8acf1
+  }
+
+  button {
+    background-color: #6149f9;
+    color: #fff;
+    border: none;
+    border-radius: 0;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 8px 16px;
+    cursor: pointer
+  }
+
+  iframe {
+    display: none
+  }
+
+  button {
+    margin-top: 16px
+  }
+
+  select {
+    border: 1px solid #000;
+    border-radius: 0;
+    padding: 8px 16px;
+    color: #000;
+    background-color: transparent;
+    width: 256px;
+    box-sizing: border-box;
+    appearance: none;
+    background-image: url('./image/down.svg');
+    background-repeat: no-repeat;
+    background-position: calc(100% - 16px) 50%;
+    background-size: 20px;
+    filter: invert()
+  }
+
+  select option {
+    color: #000 !important
+  }
+
+  #browser {
+    display: none
+  }
+
+  label {
+    font-family: 'Zilla Slab', serif;
+    font-weight: bold
+  }
+
+  label img::selection,
+  select::selection {
+    filter: invert()
+  }
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+<script>
+  function OnSubmit() {
+    $("#submit").html('<button type="submit" disabled style="cursor: not-allowed;">送信済み<\/button>');
+    document.cookie = "join=submit; max-age=3153600"
+  }
+  $("#submit button").ready(function() {
+    const n = document.cookie.split("; ").find(n => n.startsWith("join")).split("=")[1];
+    n == "submit" && $("#submit").html('<button type="submit" disabled style="cursor: not-allowed;">送信済み<\/button>')
+  });
+  $("#ua").ready(function() {
+    const n = window.navigator.userAgent.toLowerCase();
+    n.indexOf("msie") != -1 || n.indexOf("trident") != -1 ? $(".browser").val("Internet Explorer") : n.indexOf("edg") != -1 || n.indexOf("edge") != -1 ? $(".browser").val("Edge") : n.indexOf("opr") != -1 || n.indexOf("opera") != -1 ? $(".browser").val("Opera") : n.indexOf("chrome") != -1 ? n.indexOf("samsungbrowser") != -1 ? $(".browser").val("Samsung Internet") : $(".browser").val("Chrome") : n.indexOf("safari") != -1 ? $(".browser").val("Safari") : n.indexOf("firefox") != -1 ? $(".browser").val("Firefox") : (n.indexOf("opr") != -1 || n.indexOf("opera") != -1) && $(".browser").val("Opera")
+  })
+</script><iframe id="hidden" name="hidden"></iframe>
+<form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfBL3lz6HeC8NHKehtAhdUuZnZb0umc2nM5_MjlzZzXtuFAFg/formResponse" id="join" name="join" onsubmit="OnSubmit();" target="hidden">
+  <h1>Enrollment form</h1>
+  <p>全ての項目が必須です。一部でも欠如がある場合、内容は無効となります。入会以外はメールフォームまで。
+    <div><input name="entry.1387815750" placeholder="お名前（必須）" required="required" type="text"><input name="entry.1736430845" placeholder="メールアドレス（必須）" required="required" type="email"><input class="browser" style="display:none" name="entry.1967375759" type="text">
+      <label
+        for="entry.1638592019"><img src="./image/browser.svg" style="height:12px;margin-right:4px">Browser</label><select name="entry.1638592019" class="browser"><option value="Edge">Edge<option value="Chrome">Chrome<option value="Firefox">Firefox<option value="Opera">Opera<option value="Safari">Safari<option value="Internet Explorer">Internet Explorer<option value="Brave">Brave<option value="Samsung Internet">Samsung Internet</select></div>
+    <div
+      id="submit"><button type="submit">送信</button></div>
+</form>
