@@ -9,14 +9,6 @@
 <link rel="icon" href="./favicon.ico">
 <link rel="canonical" href="https://hiw-homepage.ml/mail" />
 <title>メールフォーム</title>
-<script src="https://www.google.com/recaptcha/enterprise.js?render=6LcjgQQgAAAAACMNQAVGm0Q1J3E8BtSZzOITMviv"></script>
-<script>
-grecaptcha.enterprise.ready(function() {
-    grecaptcha.enterprise.execute('6LcjgQQgAAAAACMNQAVGm0Q1J3E8BtSZzOITMviv', {action: 'login'}).then(function(token) {
-       ...
-    });
-});
-</script>
 <link loading="lazy" rel="preconnect" href="https://fonts.googleapis.com">
 <link loading="lazy" rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link loading="lazy" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;700&family=Zilla+Slab:wght@300;500;700&display=swap" rel="stylesheet">
@@ -193,10 +185,8 @@ grecaptcha.enterprise.ready(function() {
     <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSf0uTwFC5KZIs-hiQny20fiyAO4Ykr_i7y1hHfd1muvx8rjZQ/formResponse" onsubmit="OnSubmit();" target="hidden">
       <h1>Mail form</h1>
       <p>お問い合わせ内容をご入力ください。
-        <div><label for="entry.399419356">お名前</label><input name="entry.399419356" required placeholder="これは必須です" type="text"><br> <label for="entry.1144428312">メールアドレス</label><input name="entry.1144428312" placeholder="これは任意です" type="text"><br> <label for="entry.591748748">題名</label>
-          <input
-            name="entry.591748748" required placeholder="これは必須です" type="text"><br> <label for="entry.26045273">メッセージ本文</label><textarea name="entry.26045273" required placeholder="これは必須です"></textarea><input class="browser" style="display:none" name="entry.978477266" type="text"> <label for="entry.310675069"><img src="./image/browser.svg" style="height:24px;margin-right:8px;vertical-align:-6.125%">ブラウザ</label>
-            <select
+        <div><label for="entry.399419356">お名前</label><input name="entry.399419356" required placeholder="これは必須です" type="text"><br> <label for="entry.1144428312">メールアドレス</label><input name="entry.1144428312" placeholder="これは任意です" type="text"><br> <label for="entry.591748748">題名</label><input
+            name="entry.591748748" required placeholder="これは必須です" type="text"><br> <label for="entry.26045273">メッセージ本文</label><textarea name="entry.26045273" required placeholder="これは必須です"></textarea><input class="browser" style="display:none" name="entry.978477266" type="text"> <label for="entry.310675069"><img src="./image/browser.svg" style="height:24px;margin-right:8px;vertical-align:-6.125%">ブラウザ</label><select
               name="entry.310675069" class="browser">
               <option value="Edge">Edge
                 <option value="Chrome">Chrome
