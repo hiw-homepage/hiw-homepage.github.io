@@ -155,6 +155,9 @@
     font-family: "Nunito Sans", Helvetica, Arial, sans-serif
   }
 </style>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer>
+</script>
 <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
 <script loading="lazy">
   function IFrameHide() {
@@ -197,7 +200,14 @@
                           <option value="Brave">Brave
                             <option value="Samsung Internet">Samsung Internet</select>
         </div>
-        <div id="submit"><button type="submit">送信</button></div>
+        <div id="submit">
+          <form action="?" method="POST">
+            <div class="g-recaptcha" data-sitekey="6LeY4QQgAAAAAN1gfHv0hLzkgtkiOJun6Y9EP0iP"></div>
+            <br/>
+            <input type="submit" value="Submit">
+          </form>      
+          <button type="submit">送信</button>
+        </div>
     </form>
   </div>
 </main>
