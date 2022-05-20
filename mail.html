@@ -9,6 +9,14 @@
 <link rel="icon" href="./favicon.ico">
 <link rel="canonical" href="https://hiw-homepage.ml/mail" />
 <title>メールフォーム</title>
+<script src="https://www.google.com/recaptcha/enterprise.js?render=6LcjgQQgAAAAACMNQAVGm0Q1J3E8BtSZzOITMviv"></script>
+<script>
+grecaptcha.enterprise.ready(function() {
+    grecaptcha.enterprise.execute('6LcjgQQgAAAAACMNQAVGm0Q1J3E8BtSZzOITMviv', {action: 'login'}).then(function(token) {
+       ...
+    });
+});
+</script>
 <link loading="lazy" rel="preconnect" href="https://fonts.googleapis.com">
 <link loading="lazy" rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link loading="lazy" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;700&family=Zilla+Slab:wght@300;500;700&display=swap" rel="stylesheet">
