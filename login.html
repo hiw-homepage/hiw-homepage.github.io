@@ -127,7 +127,7 @@
     (async() => {
       let hashPIN = await sha256(varPIN);
       if (varId == "member" && hashPIN == "17dc3303cd10e0824497a0874a4b86275e63c943e3fefba5f5760959dd525fc2") {
-        sha256(varPIN).then(hash => location.replace("https://hiw-homepage.github.io/" + hash));
+        sha256(varPIN).then(hash => location.replace("./" + hash));
       }
     })();
   });
