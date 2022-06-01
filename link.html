@@ -77,6 +77,9 @@
     cursor: pointer;
     user-select: none
   }
+  #annot::before {
+    content: "※";
+  }
 </style>
 <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
 <script loading="lazy">
@@ -89,5 +92,8 @@
 <main>
   <div style="text-align: center;">
     <h1>Abbreviated Link</h1>
-    <p><span style="font-weight: 500;">link.hiw-homepage.ml</span>はHIWに関係するページの省略リンクに利用されています</p>
+    <div style="text-align: left; display: inline-block; padding: 0;">
+      <p><span style="font-weight: 500;">link.hiw-homepage.ml</span>はHIWに関係する場所の省略リンクに利用されています</p>
+      <p id="annot">このページはリダイレクト先です</p>
+    </div>
   </div></main>
