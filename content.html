@@ -95,6 +95,10 @@
       font-size: initial;
       padding: 32px;
   }
+  #p::before {
+    content: "注.";
+    margin-right: 6px;
+  }
 </style>
 <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
 <script loading="lazy">
@@ -113,7 +117,7 @@
     <p>特に記述が無い限りは上のライセンスが適用されます。</p>
     <h1 style="font-size: 32px; font-weight: bold;">この作品のソース</h1>
     <p>このページを含む全ては以下からコードを閲覧することができます。</p>
-    <p>注. 中に含まれる<span style="text-decoration: underline wavy black;">クエリは再利用しない</span>でください</p>
+    <p id="p">中に含まれる<span style="text-decoration: underline wavy black;">クエリは再利用しない</span>でください</p>
     <a href="https://github.com/hiw-homepage/hiw-homepage.github.io">GitHub</a>
     <h1 style="margin-top: 32px; font-size: 32px; font-weight: bold;">このページに使用される明記するべきライセンス</h1>
     <p><span style="font-weight: normal;">Zilla Slab</span><br>A custom family for Mozilla by Typotheque</p>
