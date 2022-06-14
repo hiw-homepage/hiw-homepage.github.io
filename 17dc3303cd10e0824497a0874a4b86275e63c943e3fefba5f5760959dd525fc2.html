@@ -124,7 +124,7 @@ iframe {
       <h2>Abbreviated link</h2>
       <p><span>link.hiw-homepage.ml</span>で始まる省略リンクを作成できます。</p>
       <p>組織に関係しない、または評価を害する可能性があるコンテンツには使用しないでください</p>
-      <input id="url" type="url" placeholder="省略するURL (必須)" required><br><input id="slug" type="text" placeholder="スラッグ (任意)"><br><input type="text" id="title" placeholder="タイトル (任意)"><br><button id="generation" style="margin-top: 0;">生成</button>
+      <input id="url" type="url" placeholder="省略するプロトコル付きURL (必須)" required><br><input id="slug" type="text" placeholder="スラッグ (任意)"><br><input type="text" id="title" placeholder="タイトル (任意)"><br><button id="generation" style="margin-top: 0;">生成</button>
       <script>
                 $('#generation').on('click', function() {
         if ($('#url').val() !== "" && $('#slug').val() !== "" && $('#title').val() !== "") {
