@@ -49,7 +49,7 @@ header div a {
 }
 
 main {
-    padding-top: 64px;
+    padding-top: 32px;
     margin: 0;
     font-weight: 200;
     position: relative;
@@ -57,17 +57,13 @@ main {
 }
 
 .motto {
-    margin: 0;
     color: #fff;
     font-size: 48px;
     position: relative;
-    top: 80px
-}
-
-.motto {
     background-size: cover;
     background-position: 25% 50%;
-    padding: 192px 288px
+    padding: 192px 288px;
+    margin: 0;
 }
 
 .motto div {
@@ -99,7 +95,6 @@ main .see-terms {
     background-color: #000;
     color: #fff;
     position: relative;
-    top: 48px;
     padding: 48px 0;
     text-align: center
 }
