@@ -38,83 +38,9 @@
   }
 </style>
 <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
-<script>
-  let link_click = 0;
-  $("#ua").ready(function() {
-    let n = window.navigator.userAgent.toLowerCase();
-    n.indexOf("msie") != -1 || n.indexOf("trident") != -1 || n.indexOf("safari") != -1 ? $(".motto").css("background-image", 'url("./image/group.webp")') : $(".motto").css("background-image", 'url("./image/group.avif")')
-  });
-  $(document).on("click", "#search", function() {
-    $(".search").css({
-      display: "flex"
-    });
-    $("#search").attr("id", "close");
-    $("#img").attr("src", "./image/close.svg")
-  });
-  $(document).on("click", "#close", function() {
-    $(".search").css({
-      display: "none"
-    });
-    $("#close").attr("id", "search");
-    $("#img").attr("src", "./image/search.svg")
-  });
-  $(document).on('click', '#link', function() {
-    if (link_click == 0) {
-    $('#detail').css('display', 'block');
-    $('body').css({
-      'width': 'calc(100% - 256px)',
-      'position': 'relative',
-      'left': '256px'
-    });
-    $('header').css({
-      'width': 'calc(100% - 256px)',
-      'left': '256px'
-    });
-    $('.search').css({
-      'width': 'calc(100% - 256px)',
-      'margin-left': '256px',
-      'margin-right': '0',
-      'left': '0'
-    });
-    $('#fixed h1').css('display', 'block')
-    $('#pr_dept').ready(function() {
-      let n = window.navigator.userAgent.toLowerCase();
-      n.indexOf("msie") != -1 || n.indexOf("trident") != -1 || n.indexOf("safari") != -1 ? $("#pr_dept").attr("src", './image/pr-dept.webp') : $("#pr_dept").attr("src", './image/pr-dept.avif')
-    });
-    $('#link_button').attr('src', './image/close.svg');
-    link_click = 1;
-    } else if (link_click == 1) {
-    $('#detail').hide();
-    $('body').css({
-      'width': '100%',
-      'position': 'static'
-    });
-    $('header').css({
-      'width': '100%',
-      'left': '0',
-      'padding-left': '0'
-    });
-    $('.search').css({
-      'width': '100vw',
-      'margin-left': '0',
-      'margin-right': '0',
-      'left': '0'
-    });
-    $('#fixed h1').css('display', 'none')
-    link_click = 0;
-    $('#link_button').attr('src', './image/link.svg');
-    }
-  });
-</script>
+<script src="./js/link.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MRPYCLR233"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-MRPYCLR233');
-</script>
 <div id="fixed" style="background: linear-gradient(to bottom, white, transparent); width: 256px; height: 80px;">
   <button id="link" style="padding: 28px; border: none; background-color: transparent; z-index: 6; display: inline-flex; position: fixed; left: 0; top: 0; cursor: pointer;"><img id="link_button" title="リンク" src="./image/link.svg" alt=""></button>
   <h1 style="background: linear-gradient(to bottom, white 62.5%, transparent 100%); left: 0; display: none; z-index: 5; display: flexbox; margin: 0; padding-bottom: 32px; padding-top: 24px; font-size: 24px; width: 256px; text-align: center; position: fixed;">詳細</h1>

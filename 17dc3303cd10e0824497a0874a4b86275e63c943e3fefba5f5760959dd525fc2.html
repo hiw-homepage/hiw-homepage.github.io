@@ -3,10 +3,7 @@
 <link loading="lazy" rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link loading="lazy" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;700&family=Zilla+Slab:wght@300;500;700&display=swap" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
-<script>
-    history.replaceState(null, null, "../member");
-    $(".head").ready(function(){let n=window.navigator.userAgent.toLowerCase();n.indexOf("msie")!=-1||n.indexOf("trident")!=-1||n.indexOf("safari")!=-1?$(".head").attr("src","./image/group2.webp"):$(".head").attr("src","./image/group2.avif")})
-</script>
+<script src="./js/first.js"></script>
 <meta charset="utf-8">
 <meta name="robots" content="noindex">
 <meta http-equiv="Pragma" content="no-cache">
@@ -109,22 +106,7 @@ iframe {
       <label for="pr"><input id="pr" type="checkbox" value="pr">広報部</label><br>
       <input style="display: none;" required id="subscribe" name="entry.1511026857" type="text">
       <button id="submit" type="submit">購読</button>
-      <script>
-        $('#it, #pr').ready(function() {
-          $('#subscribe').val('');
-        })
-        $('#it, #pr').on('click', function() {
-          if ($('#it').prop('checked') == true && $('#pr').prop('checked') == true) {
-            $('#subscribe').val('all')
-          } else if ($('#it').prop('checked') == true && $('#pr').prop('checked') == false) {
-            $('#subscribe').val('it')
-          } else if ($('#it').prop('checked') == false && $('#pr').prop('checked') == true) {
-            $('#subscribe').val('pr')
-          } else {
-            $('#subscribe').val('');
-          }
-        });
-      </script>
+      <script src="./17dc3303cd10e0824497a0874a4b86275e63c943e3fefba5f5760959dd525fc2.js"></script>
       <iframe style="display: none;" id="hidden" name="hidden"></iframe>
     </form>
     <div>
@@ -132,93 +114,7 @@ iframe {
       <p><span>link.hiw-homepage.ml</span>で始まる省略リンクを作成できます。</p>
       <p>組織に関係しない、または評価を害する可能性があるコンテンツには使用しないでください</p>
       <input id="url" type="url" placeholder="省略するプロトコル付きURL (必須)" required><br><input id="slug" type="text" placeholder="スラッグ (任意)"><br><input type="text" id="title" placeholder="タイトル (任意)"><br><button id="generation" type="submit" style="margin-top: 0;">生成</button>
-      <script>
-                $('#generation').on('click', function() {
-        if ($('#url').val() !== "" && $('#slug').val() !== "" && $('#title').val() !== "") {
-          const options = {
-            method: 'POST',
-            headers: {
-              Accept: 'application/json',
-              'Content-Type': 'application/json',
-              Authorization: 'pk_NfU4JNZYQbhMNdpi'
-            },
-            body: JSON.stringify({
-              allowDuplicates: false,
-              domain: 'link.hiw-homepage.ml',
-              originalURL: $('#url').val(),
-              path: $('#slug').val(),
-              title: $('#title').val()
-            })
-          };
-
-          fetch('https://api.short.io/links/public', options)
-            .then(response => response.json())
-            .then(response => console.log(response))
-            .catch(err => console.error(err));
-        } else {
-          if ($('#url').val() !== "" && $('#slug').val() !== "") {
-            const options = {
-            method: 'POST',
-            headers: {
-              Accept: 'application/json',
-              'Content-Type': 'application/json',
-              Authorization: 'pk_NfU4JNZYQbhMNdpi'
-            },
-            body: JSON.stringify({
-              allowDuplicates: false,
-              domain: 'link.hiw-homepage.ml',
-              originalURL: $('#url').val(),
-              path: $('#slug').val()
-            })
-          };
-
-          fetch('https://api.short.io/links/public', options)
-            .then(response => response.json())
-            .then(response => console.log(response))
-            .catch(err => console.error(err));
-          } else if ($('#url').val() !== "" && $('#title').val() !== "") {
-            const options = {
-            method: 'POST',
-            headers: {
-              Accept: 'application/json',
-              'Content-Type': 'application/json',
-              Authorization: 'pk_NfU4JNZYQbhMNdpi'
-            },
-            body: JSON.stringify({
-              allowDuplicates: false,
-              domain: 'link.hiw-homepage.ml',
-              originalURL: $('#url').val(),
-              title: $('#title').val()
-            })
-          };
-
-          fetch('https://api.short.io/links/public', options)
-            .then(response => response.json())
-            .then(response => console.log(response))
-            .catch(err => console.error(err));
-          } else if ($('#url').val() !== "") {
-            const options = {
-            method: 'POST',
-            headers: {
-              Accept: 'application/json',
-              'Content-Type': 'application/json',
-              Authorization: 'pk_NfU4JNZYQbhMNdpi'
-            },
-            body: JSON.stringify({
-              allowDuplicates: false,
-              domain: 'link.hiw-homepage.ml',
-              originalURL: $('#url').val()
-            })
-          };
-
-          fetch('https://api.short.io/links/public', options)
-            .then(response => response.json())
-            .then(response => console.log(response))
-            .catch(err => console.error(err));
-          }
-        }
-      })
-      </script>
+      <script src="./js/link.js"></script>
     </div>
   </div>
 </main>
