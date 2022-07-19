@@ -126,8 +126,64 @@ select::selection {
     margin-left: 24px;
   }
   #detail {
-    display: none;
+    margin-left: -256px;
+    width: 256px;
     overflow: scroll;
+    background-color: transparent;
+  }
+  .detail {
+    animation-duration: .3s;
+    animation-name: slidein;
+    animation-fill-mode: forwards;
+  }
+  @keyframes slidein {
+    from {
+      margin-left: -256px;
+      width: 256px;
+    }
+  
+    to {
+      margin-left: 0;
+      width: 256px;
+    }
+  }
+  .body {
+    animation-duration: .3s;
+    animation-name: retention;
+    animation-fill-mode: forwards;
+  }
+  @keyframes retention {
+    from {
+      width: 100%;
+      margin-left: -256px;
+    }
+  
+    to {
+      width: calc(100% - 256px);
+      margin-left: 0;
+    }
+  }
+  .iframe {
+    animation-duration: .3s;
+    animation-name: search;
+    animation-fill-mode: forwards;
+  }
+  @keyframes search {
+    from {
+      width: 100%;
+      margin-left: 0px;
+    }
+  
+    to {
+      width: calc(100% - 256px);
+      margin-left: 256px;
+    }
+  }
+  #fixed h1 {
+    background-color: transparent;
+  }
+  .h1 {
+    display: block !important;
   }
   #detail a:active {
     color: #6149f9 !important;

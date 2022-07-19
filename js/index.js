@@ -1,21 +1,24 @@
 let link_click = 0;
-$(document).on("click", "#search", function() {
-	$(".search").css({
-		display: "flex"
-	});
-	$("#search").attr("id", "close");
-	$("#img").attr("src", "./image/close.svg")
-});
-$(document).on("click", "#close", function() {
-	$(".search").css({
-		display: "none"
-	});
-	$("#close").attr("id", "search");
-	$("#img").attr("src", "./image/search.svg")
-});
+// $(document).on("click", "#search", function() {
+// 	$(".search").css({
+// 		display: "flex"
+// 	});
+// 	$("#search").attr("id", "close");
+// 	$("#img").attr("src", "./image/close.svg")
+// });
+// $(document).on("click", "#close", function() {
+// 	$(".search").css({
+// 		display: "none"
+// 	});
+// 	$("#close").attr("id", "search");
+// 	$("#img").attr("src", "./image/search.svg")
+// });
 $(document).on('click', '#link', function() {
 	if (link_click == 0) {
-		$('#detail').css('display', 'block');
+		// $('#detail').css('display', 'block');
+		$('#detail').attr('class', 'detail')
+		$('body, header').attr('class', 'body')
+		$('.search').attr('class', 'search iframe')
 		$('body').css({
 			'width': 'calc(100% - 256px)',
 			'position': 'relative',
@@ -33,9 +36,15 @@ $(document).on('click', '#link', function() {
 		});
 		$('#fixed h1').css('display', 'block')
 		$('#link_button').attr('src', './image/close.svg');
+		setTimeout(function(){
+			$('#fixed h1').css('background', 'linear-gradient(to bottom, white 62.5%, transparent 100%)')
+	   }, 300);
 		link_click = 1;
 	} else if (link_click == 1) {
-		$('#detail').hide();
+		$('#detail').removeAttr('class')
+		$('#fixed h1').css('background', 'transparent')
+		$('body, header').removeAttr('class')
+		$('.search').removeAttr('class', 'iframe')
 		$('body').css({
 			'width': '100%',
 			'position': 'static'
