@@ -1,0 +1,47 @@
+main ol {
+    counter-reset: item;
+    list-style-type: none;
+    display: flex;
+    padding-left: 0;
+    flex-direction: column;
+    gap: 32px;
+}
+main ol ol{
+    padding-left: 1em;
+}
+main ol li{
+    text-indent: -1.3em;
+    padding-left: 1.3em;
+}
+main ol li::before {
+    counter-increment: item;
+    content: counter(item)".";
+
+    padding-right: .5em;
+}
+
+main ol li:nth-of-type(1n)::before {
+    text-decoration: underline 1px solid var(--theme-color-2);
+}
+main ol li:nth-of-type(2n)::before {
+    text-decoration: underline 1px solid var(--theme-color-3);
+}
+main ol li:nth-of-type(3n)::before {
+    text-decoration: underline 1px solid var(--theme-color-4);
+}
+main #agreement {
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: bold;
+    display: inline-block;
+    padding: 4px 8px;
+    margin-top: 8px;
+    background-color: var(--theme-color-3);
+    box-sizing: border-box;
+    border: 4px solid var(--theme-color-3);
+    cursor: pointer;
+    transition: .3s;
+}
+main #agreement:hover {
+    border: 4px solid var(--theme-color-3-dark);
+}

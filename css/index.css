@@ -1,0 +1,58 @@
+main {
+    width: 75%;
+}
+main #copy {
+    display: flex;
+    margin-bottom: 8px;
+}
+main #copy img {
+    width: 50%;
+    height: 0;
+    object-fit: cover;
+}
+main #copy #text {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+main #copy #text h1 {
+    font-size: 3.5rem;
+    display: block;
+    width: 100%;
+    margin: 0;
+}
+main #copy #text h1 span, main p span {
+    white-space: nowrap;
+    display: inline-block;
+}
+main #copy #text p {
+    display: block;
+    width: 100%;
+    margin-bottom: 0;
+}
+main #annotation .credit {
+    height: 1.5rem;
+    margin-left: calc(50% - calc(6.25rem + 24px));
+    vertical-align: top;
+}
+main #more {
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: bold;
+    display: inline-block;
+    padding: 4px 8px;
+    margin-top: 8px;
+    background-color: var(--theme-color-2);
+    box-sizing: border-box;
+    border: 4px solid var(--theme-color-2);
+    cursor: pointer;
+    transition: .3s;
+}
+main #more:hover {
+    border: 4px solid var(--theme-color-2-dark);
+}
+main #annotation {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+}

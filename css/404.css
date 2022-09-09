@@ -1,0 +1,24 @@
+main {
+    background-image: url("https://735606.selcdn.ru/thumbnails/photos/o/2/q/o2q54042112a4e7c_1024.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 128px 0;
+}
+main #text {
+    text-align: start;
+    display: inline-block;
+}
+main #text h1, main #text p {
+    color: #fff;
+    text-shadow: 0 0 16px #000000c0;
+    display: inline-block;
+    margin: 0;
+}
+main #text h1 {
+    font-size: 8rem;
+}
+main #text p {
+    font-size: 4rem;
+}
