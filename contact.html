@@ -40,12 +40,14 @@
                         function logSubmit(event) {
                         const nowDate = new Date();
                         $('#log').text(nowDate.toLocaleString());
-                        event.preventDefault();
+                        setTimeout(function(){
+                            event.preventDefault();
+                        },300);
                         }
                 
                         const form = document.getElementById('form');
                         form.addEventListener('submit', logSubmit);
-                        </script>
+                    </script>
                 </form>
         </main>
     </body>
