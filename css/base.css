@@ -7,6 +7,7 @@
     --theme-color-3: #72c050;
     --theme-color-3-dark: #60b040;
     --theme-color-4: #f04030;
+    --theme-color-4-dark: #e03020;
 }
 :root, html, body {
     padding: 0;
@@ -47,7 +48,7 @@ main {
     width: 62.5%;
     margin: 48px auto;
 }
-main p, main p span, main ol * {
+main p, main p span, main #text a, main ol * {
     font-family: var(--body-font);
     font-size: 1.5rem;
 }
