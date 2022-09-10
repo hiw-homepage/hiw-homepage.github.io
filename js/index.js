@@ -1,4 +1,4 @@
 $('html').ready(function() {
-    let textHeight = $('#text').height();
-    $('#copy img').height(textHeight);
+        let textHeight = $('#text').height();
+        $('#copy #cover img').height(textHeight);
 });
