@@ -18,7 +18,9 @@ main #text h1, main #text p {
 }
 main #text h1 {
     font-size: 8rem;
+    line-height: 1em;
 }
 main #text p {
-    font-size: 4rem;
+    font-size: 2rem;
+    line-height: 1em;
 }
