@@ -48,7 +48,7 @@ main {
     width: 62.5%;
     margin: 48px auto;
 }
-main p, main p span, main #text a, main ol * {
+main p, main p span, main #text a:not(.button), main ol * {
     font-family: var(--body-font);
     font-size: 1.5rem;
 }
