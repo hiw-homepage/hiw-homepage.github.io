@@ -10,9 +10,6 @@ main #text ol li span {
     font-size: .75em;
     vertical-align: super;
 }
-main #text ol small::before {
-    content: "※";
-}
 main #agreement {
     color: #fff;
     font-size: 1.25rem;

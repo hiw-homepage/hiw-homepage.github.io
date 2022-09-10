@@ -62,3 +62,10 @@ main a {
 main a:hover {
     text-decoration: underline;
 }
+main #text small {
+    font-family: var(--body-font);
+    font-size: 1.5rem;
+}
+main #text small::before {
+    content: "※";
+}
