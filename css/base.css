@@ -55,7 +55,11 @@ main p, main p span, main #text a:not(.button), main ol * {
 main #text a:not(.button) {
     color: var(--theme-color-2);
 }
-main #text a:not(.button):hover {
+main a {
+    color: var(--theme-color-3);
+    text-decoration: underline;
+}
+main a:hover {
     text-decoration: 0;
 }
 main #text small {
