@@ -55,12 +55,8 @@ main p, main p span, main #text a:not(.button), main ol * {
 main #text a:not(.button) {
     color: var(--theme-color-2);
 }
-main a {
-    color: var(--theme-color-3);
+main #text a:not(.button):hover {
     text-decoration: 0;
-}
-main a:hover {
-    text-decoration: underline;
 }
 main #text small {
     font-family: var(--body-font);
