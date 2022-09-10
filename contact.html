@@ -40,6 +40,12 @@
                         function logSubmit(event) {
                         const nowDate = new Date();
                         $('#log').text(nowDate.toLocaleString());
+                        $('button[type="submit"]').attr('disabled', 'disabled')
+                        $('button[type="submit"]').css({
+                            'background-color': '#c0c0c0',
+                            'border': '4px solid #c0c0c0',
+                            'cursor': 'not-allowed'
+                        })
                         setTimeout(function() {
                             event.preventDefault();
                         }, 300);

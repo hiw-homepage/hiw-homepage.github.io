@@ -52,6 +52,9 @@ main p, main p span, main #text a:not(.button), main ol * {
     font-family: var(--body-font);
     font-size: 1.5rem;
 }
+main #text a:not(.button) {
+    color: var(--theme-color-2);
+}
 main a {
     color: var(--theme-color-3);
     text-decoration: 0;
