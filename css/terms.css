@@ -1,33 +1,20 @@
-main ol {
-    counter-reset: item;
-    list-style-type: none;
+main #text ol {
     display: flex;
-    padding-left: 0;
     flex-direction: column;
     gap: 32px;
 }
-main ol ol{
-    padding-left: 1em;
+main #text > ol {
+    padding-left: 0;
 }
-main ol li{
-    text-indent: -1.3em;
-    padding-left: 1.3em;
+main #text ol li span {
+    font-size: .75em;
+    vertical-align: super;
 }
-main ol li::before {
-    counter-increment: item;
-    content: counter(item)".";
-
-    padding-right: .5em;
+main #text ol small {
+    font-size: 1.25rem;
 }
-
-main ol li:nth-of-type(1n)::before {
-    text-decoration: underline 1px solid var(--theme-color-2);
-}
-main ol li:nth-of-type(2n)::before {
-    text-decoration: underline 1px solid var(--theme-color-3);
-}
-main ol li:nth-of-type(3n)::before {
-    text-decoration: underline 1px solid var(--theme-color-4);
+main #text ol small::before {
+    content: "※";
 }
 main #agreement {
     color: #fff;
