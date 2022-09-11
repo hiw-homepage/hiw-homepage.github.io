@@ -27,7 +27,7 @@ header #logo {
     font-family: 'Fira Sans', sans-serif;
     font-weight: bold;
     font-size: 4rem;
-    text-decoration: 0;
+    text-decoration: none;
     display: inline-block;
 }
 header > div {
@@ -43,7 +43,7 @@ header .links a {
     color: #000;
     font-size: 1.125rem;
     font-weight: 600;
-    text-decoration: 0;
+    text-decoration: none;
 }
 main {
     width: 62.5%;
@@ -61,10 +61,10 @@ main a:not(.button) {
     text-decoration: underline;
 }
 main a:not(.button):hover {
-    text-decoration: 0;
+    text-decoration: none;
 }
 main a.button {
-    text-decoration: 0;
+    text-decoration: none;
 }
 main a.button:hover {
     text-decoration: underline;

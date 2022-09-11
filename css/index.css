@@ -40,6 +40,12 @@ main #copy #cover .credit {
     margin: 8px 0 0 0;
     vertical-align: top;
 }
+main #copy #cover .credit {
+    text-decoration: none;
+}
+main #copy #cover .credit:hover {
+    text-decoration: underline;
+}
 main #more {
     color: #fff;
     font-size: 1.25rem;
