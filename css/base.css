@@ -8,7 +8,6 @@
     --theme-color-3-dark: #60b040;
     --theme-color-4: #f04030;
     --theme-color-4-dark: #e03020;
-    --theme-color-5: #0060c0;
 }
 :root, html, body {
     padding: 0;
@@ -54,9 +53,9 @@ main p, main p span, main #text a:not(.button), main ol * {
     font-size: 1.5rem;
 }
 main #text a:not(.button) {
-    color: var(--theme-color-5);
+    color: auto;
 }
-main a:not(.button) {
+main a:not(.button, #text a) {
     color: var(--theme-color-3);
     text-decoration: underline;
 }
