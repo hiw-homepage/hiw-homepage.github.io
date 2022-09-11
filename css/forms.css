@@ -54,5 +54,4 @@ main form button[type="submit"]:hover {
 #log {
     font-family: 'Fira Sans', sans-serif;
     font-size: 1rem;
-    text-decoration: underline 1px solid var(--theme-color-3);
 }
