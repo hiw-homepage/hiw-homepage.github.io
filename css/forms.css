@@ -10,7 +10,7 @@ main form div {
     flex-direction: column;
     gap: 24px;
 }
-main form label {
+main form label, main form label * {
     font-family: var(--body-font);
     font-size: 1.25rem;
 }
