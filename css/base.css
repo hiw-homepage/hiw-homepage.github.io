@@ -55,7 +55,7 @@ main p, main p *, main #text a:not(.button), main ol * {
 main #text a:not(.button) {
     color: auto;
 }
-main a:not(.button, #text a) {
+main a:not(.button) {
     color: var(--theme-color-3);
     text-decoration: underline;
 }
