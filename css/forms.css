@@ -38,10 +38,7 @@ main form label input, main form label textarea {
 main form label input:focus, main form label textarea:focus {
     border: 2px solid #909090;
 }
-main form label input[type="email"]:user-valid {
-    border-color: var(--valid-color);
-}
-main form label input[type="email"]:user-invalid {
+main form label input[type="email"]:invalid {
     border-color: var(--invalid-color);
 }
 main form button[type="submit"] {
