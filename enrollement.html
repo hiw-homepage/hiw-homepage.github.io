@@ -41,6 +41,10 @@
                         function logSubmit(event) {
                         const nowDate = new Date();
                         $('#log').text(nowDate.toLocaleString());
+                        $('main form label input').attr({
+                            'disabled': 'disabled',
+                            'title': 'このフォームはすでに送信されています'
+                        });
                         $('main form label input').css('opacity', '.5');
                         $('button[type="submit"]').attr('disabled', 'disabled');
                         $('button[type="submit"]').css({
