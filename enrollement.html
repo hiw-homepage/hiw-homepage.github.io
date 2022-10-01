@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="./css/base.css">
         <link rel="stylesheet" href="./css/forms.css">
         <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js" integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script>
+        <script src="./js/enrollement.js"></script>
         <title>入会フォーム</title>
     </head>
     <body>
@@ -40,12 +41,13 @@
                         function logSubmit(event) {
                         const nowDate = new Date();
                         $('#log').text(nowDate.toLocaleString());
-                        $('button[type="submit"]').attr('disabled', 'disabled')
+                        $('button[type="submit"]').attr('disabled', 'disabled');
                         $('button[type="submit"]').css({
                             'background-color': '#c0c0c0',
                             'border': '4px solid #c0c0c0',
                             'cursor': 'not-allowed'
-                        })
+                        });
+                        localStorage.setItem('formSubmitted', 'true');
                         setTimeout(function() {
                             event.preventDefault();
                         }, 300);
