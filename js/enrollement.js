@@ -1,10 +1,10 @@
 $('html').ready(function() {
-    if(!localStorage.getItem('efSubmitted')) {
+    if(localStorage.getItem('efSubmitted') == 'true') {
         $('main form label input').attr({
             'disabled': 'disabled',
             'title': 'このフォームはすでに送信されています'
         });
-        $('main form label input').css('opacity', '.5')
+        $('main form label input').css('opacity', '.5');
         $('button[type="submit"]').attr('disabled', 'disabled');
         $('button[type="submit"]').css({
             'background-color': '#c0c0c0',
