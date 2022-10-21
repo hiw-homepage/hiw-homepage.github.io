@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="./css/base.css">
         <link rel="stylesheet" href="./css/forms.css">
         <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js" integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script>
-        <script src="./js/enrollement.js"></script>
+        <link rel="preload" href="./js/enrollement.js" as="script">
         <title>入会フォーム</title>
     </head>
     <body>
@@ -29,7 +29,7 @@
                 <p>それ以外の連絡は<a href="./contact" target="_blank">お問い合わせ</a>まで。</p>
                 <small>全ての項目が必須です</small>
             </div>
-                <iframe src="" hidden></iframe>
+                <iframe src="" name="hidden" hidden></iframe>
                 <form id="form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfBL3lz6HeC8NHKehtAhdUuZnZb0umc2nM5_MjlzZzXtuFAFg/formResponse" target="hidden">
                     <div>
                         <label for="entry.399419356">名前<span>*</span><input type="text" name="entry.1387815750" required autocomplete="off"></label>
