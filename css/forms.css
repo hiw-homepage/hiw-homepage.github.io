@@ -2,9 +2,6 @@
     --valid-color: #72c850;
     --invalid-color: #d83728;
 }
-main iframe[name="hidden"] {
-    display: none;
-}
 main form {
     margin-top: 24px;
 }

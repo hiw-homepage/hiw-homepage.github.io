@@ -32,13 +32,13 @@ header #logo {
 header > div {
     display: inline-block;
 }
-header .links {
+header div nav {
     line-height: 32px;
     display: inline-flex;
     flex-direction: row;
     gap: 16px;
 }
-header .links a {
+header div nav a {
     color: #000;
     font-size: 1.125rem;
     font-weight: 600;
