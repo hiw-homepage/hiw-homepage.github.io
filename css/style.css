@@ -1,0 +1,77 @@
+:root {
+    --headline-font: 'Inter', メイリオ, Meiryo, sans-serif;
+    --body-font: 'Times New Roman', Times, 游明朝, "Yu Mincho", YuMincho, "Hiragino Mincho ProN", "Hiragino Mincho Pro", HGS明朝E, メイリオ, Meiryo, serif;
+    --theme-color-1: #c03020;
+    --theme-color-2: #00afe0;
+    --theme-color-2-dark: #00a0c0;
+    --theme-color-3: #72c050;
+    --theme-color-3-dark: #60b040;
+    --theme-color-4: #f04030;
+    --theme-color-4-dark: #e03020;
+}
+:root, html, body {
+    padding: 0;
+    margin: 0;
+}
+:root, html, body, body * {
+    font-family: var(--headline-font);
+}
+header {
+    padding: 16px 0;
+    text-align: center;
+    box-shadow: 0 0 4px #00000080;
+}
+header #logo {
+    color: var(--theme-color-1);
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: bold;
+    font-size: 4rem;
+    text-decoration: none;
+    display: inline-block;
+}
+header > div {
+    display: inline-block;
+}
+header div nav {
+    line-height: 32px;
+    display: inline-flex;
+    flex-direction: row;
+    gap: 16px;
+}
+header div nav a {
+    color: #000;
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+main {
+    width: 62.5%;
+    margin: 48px auto;
+}
+main p, main p *, main #text a:not(.button), main ol * {
+    font-family: var(--body-font);
+    font-size: 1.5rem;
+}
+main #text a:not(.button) {
+    color: auto;
+}
+main a:not(.button) {
+    color: var(--theme-color-3);
+    text-decoration: underline;
+}
+main a:not(.button):hover {
+    text-decoration: none;
+}
+main a.button {
+    text-decoration: none;
+}
+main a.button:hover {
+    text-decoration: underline;
+}
+main #text small, main #text small * {
+    font-family: var(--body-font);
+    font-size: 1.5rem;
+}
+main #text small::before {
+    content: "※";
+}

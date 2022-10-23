@@ -1,0 +1,15 @@
+main p, main p *, main #text a:not(.button), main ol * {
+    font-family: var(--body-font);
+    font-size: 1.75rem;
+}
+header div nav a {
+    font-size: 1.25rem;
+}
+/* For individual pages */
+
+main #copy #cover .credit {
+    font-size: 1.375rem;
+}
+main #more {
+    font-size: 1.375rem !important;
+}
