@@ -1,0 +1,6 @@
+main form label input, main form label textarea {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: calc(1.25rem + 4px);
+}
