@@ -10,19 +10,16 @@ main #copy #text {
     flex-direction: column;
     width: 50%;
 }
+main #copy #text h1, main #copy #text p {
+    display: block;
+    width: 100%;
+    word-break: keep-all;
+}
 main #copy #text h1 {
     font-size: 3.5rem;
-    display: block;
-    width: 100%;
     margin: 0;
 }
-main #copy #text h1 span, main p span {
-    white-space: nowrap;
-    display: inline-block;
-}
 main #copy #text p {
-    display: block;
-    width: 100%;
     margin-bottom: 0;
 }
 main #copy #cover {
