@@ -24,6 +24,8 @@ main form label input, main form label textarea {
     font-family: var(--body-font);
     font-size: 1.25rem;
     width: 50%;
+    max-width: 100%;
+    min-height: calc(1.25rem + 4px);
     padding: .25em .5em;
     border: 2px solid #b0b0b0;
     border-radius: 0;
