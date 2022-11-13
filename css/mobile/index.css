@@ -1,0 +1,21 @@
+main #copy {
+    display: block;
+}
+main #copy #text, main #copy #cover {
+    width: 100%;
+}
+main #copy #text h1 {
+    font-size: 2.5rem;
+}
+main #copy #text p, main #copy #text p * {
+    font-size: 1.5rem;
+}
+main #copy #text p {
+    word-break: break-all;
+}
+main #more {
+    margin-bottom: 32px;
+}
+main #copy #cover img {
+    height: 50vw;
+}
