@@ -1,0 +1,7 @@
+header div nav {
+    line-height: 48px;
+    gap: 32px;
+}
+header div nav a {
+    font-size: 1.25rem;
+}
