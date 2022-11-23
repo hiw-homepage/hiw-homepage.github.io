@@ -28,13 +28,42 @@
     <body>
         <header>
             <div>
-                <a id="logo" href="./" translate="no">hiw</a><br>
+                <a id="logo" href="./" translate="no">hiw</a>
+                <br>
                 <nav>
                     <a href="./terms">Terms</a>
                     <a href="./enrollement">Enrollment</a>
                     <a href="./contact">Contact</a>
                 </nav>
             </div>
+            <button id="share"><img src="./img/icons/share.svg" alt=""></button>
+            <dialog id="qRCode">
+                <img src="./img/qr-code.svg" alt="">
+                <div style="display: flex;">
+                    <a href="https://social-plugins.line.me/lineit/share?url=https://www.hiw-homepage.ml/" target="_blank" title="LINE で共有"><img src="https://developers.line.biz/media/line-social-plugins/square-default.png" alt=""></a>
+                    <script>
+                        // Place this code in the head section of your HTML file 
+                        (function(r, d, s) {
+                            r.loadSkypeWebSdkAsync = r.loadSkypeWebSdkAsync || function(p) {
+                                var js, sjs = d.getElementsByTagName(s)[0];
+                                if (d.getElementById(p.id)) { return; }
+                                js = d.createElement(s);
+                                js.id = p.id;
+                                js.src = p.scriptToLoad;
+                                js.onload = p.callback
+                                sjs.parentNode.insertBefore(js, sjs);
+                            };
+                            var p = {
+                                scriptToLoad: 'https://swx.cdn.skype.com/shared/v/latest/skypewebsdk.js',
+                                id: 'skype_web_sdk'
+                            };
+                            r.loadSkypeWebSdkAsync(p);
+                        })(window, document, 'script');
+                        </script>
+                        <div class='skype-share' data-href='https://www.hiw-homepage.ml/' data-lang='' data-text='' data-style='square' ></div>
+                        <a id="email" href="mailto:?body=https://www.hiw-homepage.ml/" title="メールで送信する"><img src="./img/icons/mail.svg" alt=""></a>
+                </div>
+            </dialog>
         </header>
         <main>
             <div id="copy">

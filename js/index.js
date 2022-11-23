@@ -4,3 +4,15 @@ $('html').ready(function() {
         $('#copy #cover img').height(textHeight);
     }
 });
+
+let dialog;
+
+$('#share').on('click', function() {
+    if(dialog === 0 || !dialog) {
+        $('#qRCode').attr('open', 'open');
+        dialog = 1;
+    } else {
+        $('#qRCode').removeAttr('open');
+        dialog = 0;
+    }
+});

@@ -18,7 +18,7 @@
     font-family: var(--headline-font);
 }
 header {
-    padding: 16px 0;
+    padding: 16px 0 16px calc(2rem + 64px);
     text-align: center;
     box-shadow: 0 0 4px #00000080;
 }
@@ -44,6 +44,64 @@ header div nav a {
     font-size: 1.125rem;
     font-weight: 600;
     text-decoration: none;
+}
+header #share {
+    position: relative;
+    float: right;
+    padding: 8px;
+    margin-top: calc(2.4rem - 8px);
+    margin-right: 32px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+header #share:hover {
+    background-color: #80808020;
+}
+header #share img {
+    width: 2rem;
+    height: 2rem;
+    vertical-align: bottom;
+}
+header #qRCode {
+    width: 12rem;
+    margin-left: calc(100% - 12rem - 64px);
+    border: 2px solid #c0c0c0;
+}
+header #qRCode img {
+    width: 12rem;
+    height: 12rem;
+    user-select: none;
+    pointer-events: none;
+}
+header #qRCode a, .skypeShare.square {
+    margin: .5rem;
+}
+header #qRCode a:not(#email *), header #qRCode a img:not(#email *), .skypeShare:not(#email *), .square:not(#email *) {
+    display: block;
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+}
+.skypeShareLogo {
+    width: 1.75rem !important;
+    height: 1.75rem !important;
+}
+.skypeShare {
+    border-radius: 4px;
+}
+.skypeShare:hover, .skypeShare:active  {
+    border: 0 !important;
+    background-color: #00aff0 !important;
+    margin: .5rem !important;
+}
+#email {
+    background-color: #808080;
+    border-radius: 4px;
+}
+#email img {
+    width: 1.5rem !important;
+    height: 1.5rem !important;
+    margin: 8px;
 }
 main {
     width: 62.5%;
